@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pressmark — Notes on the Typographic Page</title>
+    <meta
+      name="description"
+      content="A six-part essay on the craft of book design — Gutenberg's invention, Tschichold's grid, the science of legibility, screen rendering, and what the printed page preserves in an age of screens."
+    />
+    <meta name="theme-color" content="#f5f0e8" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Pressmark — Notes on the Typographic Page" />
+    <meta
+      property="og:description"
+      content="A six-part essay on the craft of book design — from Gutenberg's press to variable fonts."
+    />
+
+    <!-- Preload heading font (LCP candidate) -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="assets/fonts/fraunces-latin-normal.woff2"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/typography.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/reduced-motion.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  </head>
+
+  <body>
+    <a class="skip-nav" href="#main-content">Skip to main content</a>
+
+    <!-- ── Site header ── -->
+    <header class="site-header" role="banner">
+      <div class="site-header__inner">
+        <span class="site-header__wordmark">Pressmark</span>
+        <nav class="section-nav" aria-label="Essay sections">
+          <ol role="list">
+            <li>
+              <a href="#the-black-art" aria-label="Section 01: The Black Art">01</a>
+            </li>
+            <li>
+              <a href="#the-page-as-canvas" aria-label="Section 02: The Page as Canvas">02</a>
+            </li>
+            <li>
+              <a href="#the-face" aria-label="Section 03: The Face">03</a>
+            </li>
+            <li>
+              <a href="#reading" aria-label="Section 04: Reading">04</a>
+            </li>
+            <li>
+              <a href="#digital" aria-label="Section 05: Digital">05</a>
+            </li>
+            <li>
+              <a href="#what-remains" aria-label="Section 06: What Remains">06</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <div
+        class="reading-progress"
+        role="progressbar"
+        aria-label="Reading progress"
+        aria-valuenow="0"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="reading-progress__bar"></div>
+      </div>
+    </header>
+
+    <!-- ── Main content ── -->
+    <main id="main-content">
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__inner">
+          <p class="hero__eyebrow">Pressmark</p>
+          <h1 id="hero-title" class="hero__title">
+            <span>Notes on the</span>
+            <span>Typographic</span>
+            <span>Page</span>
+          </h1>
+          <p class="hero__subtitle">
+            An essay on the craft of book design — what print taught us about making text
+            beautiful, and what the digital age preserved and lost.
+          </p>
+          <div class="hero__scroll-cue" aria-hidden="true">
+            <span class="hero__scroll-line"></span>
+            <span class="hero__scroll-text">Scroll</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════════════
+           01 — The Black Art
+      ════════════════════════════════════════════════ -->
+      <article class="essay-section" id="the-black-art" aria-labelledby="s01-heading">
+        <div class="section__header">
+          <span class="section__number" aria-hidden="true">01</span>
+          <h2 id="s01-heading" class="section-heading">The Black Art</h2>
+          <p class="section__deck">
+            Gutenberg, movable type, and the invention that changed everything
+          </p>
+        </div>
+
+        <div class="section__body">
+          <div class="section__text">
+            <p class="section__lead has-dropcap">
+              In the winter of 1450, in a workshop on the Gutleutstrasse in Mainz, Johannes
+              Gutenberg pressed damp paper against an arrangement of metal letters and produced
+              something the world had never seen: a page that could be reproduced exactly,
+              thousands of times, without a scribe's hand ever touching it.
+            </p>
+
+            <p>
+              The craftsmen who worked the early presses were called practitioners of the "black
+              art" — partly because of the ink that stained their hands and aprons, and partly
+              because what they did seemed, to those who watched it, like a kind of sorcery.
+              Documents that had taken months to produce by hand could now be multiplied in
+              days. The same text, set once in metal, could speak in a thousand voices
+              simultaneously. The Church was uneasy. The scholars were intoxicated.
+            </p>
+
+            <p>
+              What Gutenberg actually invented was less a machine than a system. The screw press
+              had existed for centuries, used to crush grapes and olives. The innovation was the
+              type itself: individual metal letters, each cast to the same height and depth, that
+              could be assembled into words, locked into a form, printed, and then broken apart
+              to be reassembled into new words. The intelligence was in the interchangeability.
+              This was, in the language of our own age, a modular system — a platform, not a
+              product.
+            </p>
+
+            <blockquote class="pullquote">
+              <p>
+                Type is not a neutral carrier of meaning; it is meaning's first impression of
+                itself.
+              </p>
+            </blockquote>
+
+            <p>
+              The typefaces of the early printers were designed to replicate the handwriting they
+              replaced. Gutenberg's type was a near-perfect imitation of the Rhineland
+              blackletter script used by the Mainz scribes. This tells us something important
+              about how new technologies announce themselves: they begin by pretending to be the
+              old thing. It took decades before printers began to design letters that could only
+              be cast in metal — letters that took full advantage of the medium rather than
+              merely imitating what came before.
+            </p>
+
+            <p>
+              That moment of liberation — when a technology stops copying its predecessor and
+              starts being itself — is the inflection point in every medium's history. It is
+              worth watching for it. We have not always been quick to recognize it when it
+              arrives.
+            </p>
+          </div>
+
+          <figure class="section__figure">
+            <picture>
+              <source type="image/avif" srcset="assets/images/gutenberg-press.avif" />
+              <img
+                src="assets/images/gutenberg-press.webp"
+                alt="A full-scale replica of Gutenberg's screw press at the Gutenberg Museum in Mainz, Germany, with individual lead type pieces visible in the foreground"
+                width="800"
+                height="560"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <figcaption>
+              Reconstruction of Gutenberg's press. Gutenberg-Museum Mainz, est. 1451.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="section__closer">
+          <hr class="section-rule" />
+        </div>
+      </article>
+
+      <!-- ════════════════════════════════════════════════
+           02 — The Page as Canvas
+      ════════════════════════════════════════════════ -->
+      <article
+        class="essay-section"
+        id="the-page-as-canvas"
+        aria-labelledby="s02-heading"
+      >
+        <div class="section__header">
+          <span class="section__number" aria-hidden="true">02</span>
+          <h2 id="s02-heading" class="section-heading">The Page as Canvas</h2>
+          <p class="section__deck">
+            Jan Tschichold, the modernist grid, and the meaning of white space
+          </p>
+        </div>
+
+        <div class="section__body">
+          <div class="section__text">
+            <p class="section__lead has-dropcap">
+              In 1928, a twenty-six-year-old German typographer named Jan Tschichold published a
+              pamphlet that declared almost everything his predecessors had done to be wrong. The
+              pamphlet was called
+              <cite>Die neue Typographie</cite>. It was addressed to printers, compositors, and
+              advertising designers, and it was furious.
+            </p>
+
+            <p>
+              The old typography, Tschichold argued, was decorative and backward-looking. It
+              pasted ornaments onto pages in lieu of thinking about what those pages were
+              supposed to do. It valued tradition over purpose. The new typography would be
+              different: functional, asymmetric, built around the actual movement of the eye
+              across the page. It would use white space not as an absence but as an active
+              element — a force that pushed and pulled the reader through the text.
+            </p>
+
+            <p>
+              The grid was Tschichold's primary instrument. Not the rigid symmetrical grids of
+              earlier book design, but a flexible underlying structure that could be adapted to
+              the demands of each job while maintaining coherence across the whole. The grid was
+              invisible to the reader but felt everywhere: in the confident placement of a
+              headline, in the breathing room around a block of text, in the way a photograph
+              aligned itself to the edge of a column as if it had always belonged there.
+            </p>
+
+            <blockquote class="pullquote">
+              <p>
+                White space is not empty. It is the silence between notes that gives music its
+                shape.
+              </p>
+            </blockquote>
+
+            <p>
+              It is worth noting that Tschichold himself, in his later years, recanted much of
+              the manifesto. He came to believe that his younger self had been too dogmatic, too
+              quick to condemn. The asymmetric layout that he had championed as the only honest
+              approach to typography he now saw as just one valid approach among many. He
+              returned to classical book design, to centered text and traditional proportions.
+              He designed the original Penguin paperback style guide, one of the most quietly
+              influential pieces of typography of the twentieth century.
+            </p>
+
+            <p>
+              The lesson is not that Tschichold was wrong, but that he was young. The value of
+              his polemic was not its specific prescriptions but its insistence that typography
+              be taken seriously as a discipline — that how text is arranged on a page is not a
+              matter of convention and habit but of intention and care.
+            </p>
+          </div>
+
+          <figure class="section__figure">
+            <picture>
+              <source type="image/avif" srcset="assets/images/tschichold-grid.avif" />
+              <img
+                src="assets/images/tschichold-grid.webp"
+                alt="A spread from Jan Tschichold's 1928 book Die neue Typographie, showing his asymmetric grid principles applied to a two-page layout"
+                width="800"
+                height="560"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <figcaption>
+              From <cite>Die neue Typographie</cite>, Jan Tschichold, 1928.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="section__closer">
+          <hr class="section-rule" />
+        </div>
+      </article>
+
+      <!-- ════════════════════════════════════════════════
+           03 — The Face
+      ════════════════════════════════════════════════ -->
+      <article class="essay-section" id="the-face" aria-labelledby="s03-heading">
+        <div class="section__header">
+          <span class="section__number" aria-hidden="true">03</span>
+          <h2 id="s03-heading" class="section-heading">The Face</h2>
+          <p class="section__deck">
+            On Fraunces — a variable typeface and its unusual design decisions
+          </p>
+        </div>
+
+        <div class="section__body">
+          <div class="section__text">
+            <p class="section__lead has-dropcap">
+              The essay you are reading is set in Fraunces, a variable typeface designed by
+              Phaedra Charles and Flavia Zimbardi and released in 2020. This sentence is a
+              demonstration of its subject, which is either the most elegant thing about this
+              section or the most irritating, depending on your tolerance for self-reference.
+            </p>
+
+            <p>
+              Fraunces belongs to a tradition of soft, high-contrast display serifs — fonts
+              designed to be seen before they are read. Its proportions are generous, its
+              strokes assertive, its serifs delicate. It draws from the old-style types of the
+              seventeenth and eighteenth centuries but does not imitate them: it takes the
+              emotional temperature of that period and recalibrates it for contemporary use.
+              Where a Garamond whispers, Fraunces speaks at a considered volume.
+            </p>
+
+            <p>
+              What makes Fraunces technically distinctive is its variable font axes. Most
+              variable fonts offer one or two axes — typically weight and width. Fraunces offers
+              three, and the third is unusual: an axis called SOFT, which controls the ink trap
+              depth of the letterforms. At low values, the letters are crisp and angular. As the
+              axis increases, the corners soften as if the type had been pressed into damp paper
+              under heavy pressure, filling the ink traps until the letter becomes slightly
+              rounder and more yielding. It is the difference between type seen under bright
+              fluorescent light and type seen in afternoon sun.
+            </p>
+
+            <blockquote class="pullquote">
+              <p>
+                A typeface is not a tool. It is a collaborator with an opinion about every word
+                it renders.
+              </p>
+            </blockquote>
+
+            <p>
+              The optical size axis — opsz — is perhaps the most important of the three for
+              everyday reading. As font size increases, the optical size value should increase
+              with it: large type benefits from tighter spacing and more refined details, while
+              small type needs wider apertures and looser proportions to remain legible. The
+              variable font makes this automatic and continuous, rather than requiring the
+              designer to switch between named optical sizes. The type simply looks right at any
+              size, because the designer built the logic of size into the font itself.
+            </p>
+
+            <p>
+              To read this essay is to use the typeface the way it was designed to be used: at
+              varying sizes, in long passages, for extended reading. The headings are set at
+              maximum optical size. The body is set at reading size. The captions are set in a
+              monospace face, DM Mono, that provides contrast without competition. The three
+              typefaces do not fight. They have different voices, and they know when to speak.
+            </p>
+          </div>
+
+          <figure class="section__figure">
+            <picture>
+              <source type="image/avif" srcset="assets/images/fraunces-specimen.avif" />
+              <img
+                src="assets/images/fraunces-specimen.webp"
+                alt="A specimen sheet showing the Fraunces typeface at multiple weights and optical sizes, with letterforms A through Z demonstrating the SOFT axis variation from sharp to rounded"
+                width="800"
+                height="560"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <figcaption>
+              Fraunces specimen showing SOFT axis at 0 and 100. Charles &amp; Zimbardi, 2020.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="section__closer">
+          <hr class="section-rule" />
+        </div>
+      </article>
+
+      <!-- ════════════════════════════════════════════════
+           04 — Reading
+      ════════════════════════════════════════════════ -->
+      <article class="essay-section" id="reading" aria-labelledby="s04-heading">
+        <div class="section__header">
+          <span class="section__number" aria-hidden="true">04</span>
+          <h2 id="s04-heading" class="section-heading">Reading</h2>
+          <p class="section__deck">
+            Eye physiology, the science of legibility, and the hospitality of the well-set page
+          </p>
+        </div>
+
+        <div class="section__body">
+          <div class="section__text">
+            <p class="section__lead has-dropcap">
+              The eye does not read the way we imagine it does. It does not glide smoothly
+              across a line of text the way a finger traces a sentence on a page. It jumps —
+              rapid jerking movements called saccades, interspersed with brief pauses called
+              fixations. We read in flashes.
+            </p>
+
+            <p>
+              Each fixation lasts roughly a quarter of a second and captures a region of about
+              seven to nine characters. The brain assembles these snapshots into the illusion of
+              continuous text. Good typography makes this assembly effortless. Poor typography
+              forces the brain to do extra work: resolving ambiguous letterforms, adjusting for
+              insufficient line spacing, doubling back when the eye loses its place at a line
+              ending. The reader does not consciously notice this extra work. They simply feel
+              tired, or vaguely dissatisfied, or find that they have read the same paragraph
+              twice without meaning to.
+            </p>
+
+            <p>
+              The optimal line length for comfortable reading has been studied since the
+              nineteenth century. The typographer Robert Bringhurst, in his essential reference
+              <cite>The Elements of Typographic Style</cite>, recommends between forty-five and
+              seventy-five characters per line as the range that minimizes eye fatigue. At fewer
+              than forty-five characters, the line endings come too frequently and disturb the
+              reading rhythm. At more than seventy-five, the eye has difficulty finding the
+              start of the next line. This essay uses sixty-five characters as its measure: long
+              enough for sustained reading, short enough for the eye to navigate comfortably.
+            </p>
+
+            <blockquote class="pullquote">
+              <p>
+                Legibility is not beauty made practical. It is the invisible hospitality of the
+                page.
+              </p>
+            </blockquote>
+
+            <p>
+              What we call "legibility" is actually a cluster of related but distinct qualities:
+              the readability of individual letterforms (can you tell a lowercase "l" from a
+              capital "I"?), the rhythm of words on a line (do the spaces between words feel
+              consistent?), the coherence of the text block (does the page feel unified or
+              scattered?), and the comfort of extended reading (does the type reward attention
+              or punish it?). A typeface can excel in some of these dimensions and fail in
+              others.
+            </p>
+
+            <p>
+              The best typography is transparent. It is felt rather than noticed, the way good
+              film editing is felt: you become aware of it only when it fails, when a cut is
+              wrong or a word is unreadable. The page that serves the reader best is the page
+              that the reader never thinks about — because thinking about the page is not why
+              they came.
+            </p>
+          </div>
+
+          <figure class="section__figure">
+            <picture>
+              <source type="image/avif" srcset="assets/images/eye-tracking.avif" />
+              <img
+                src="assets/images/eye-tracking.webp"
+                alt="An eye-tracking visualization showing reading patterns on a paragraph of text, with colored heat map dots indicating fixation points and lines showing saccadic movements between them"
+                width="800"
+                height="560"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <figcaption>
+              Eye-tracking visualization of reading fixations and saccades on continuous text.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="section__closer">
+          <hr class="section-rule" />
+        </div>
+      </article>
+
+      <!-- ════════════════════════════════════════════════
+           05 — Digital
+      ════════════════════════════════════════════════ -->
+      <article class="essay-section" id="digital" aria-labelledby="s05-heading">
+        <div class="section__header">
+          <span class="section__number" aria-hidden="true">05</span>
+          <h2 id="s05-heading" class="section-heading">Digital</h2>
+          <p class="section__deck">
+            Screen rendering, hinting, and the type wars of the 1990s–2010s
+          </p>
+        </div>
+
+        <div class="section__body">
+          <div class="section__text">
+            <p class="section__lead has-dropcap">
+              When type moved to screens, it entered hostile territory. A screen is a grid of
+              discrete points — pixels — and a letterform is a continuous curve. Mapping one
+              onto the other requires a process called rasterization, and for many years,
+              rasterization was the enemy of good type.
+            </p>
+
+            <p>
+              The problem is worst at small sizes. At twelve pixels of cap height, the elegant
+              curve of a lowercase "e" must be approximated by a handful of square pixels. The
+              decisions that determine which pixels to turn on — and by how much, in the case of
+              sub-pixel rendering — can make a typeface look crisp and readable or blurred and
+              broken. These decisions are encoded in the font file itself, in a process called
+              hinting. A hinted font contains instructions that tell the rasterizer how to
+              adjust the letterforms for the pixel grid at specific sizes.
+            </p>
+
+            <p>
+              Writing hints is among the most painstaking work in type design. A single font
+              might require hundreds of hours of hinting, and the instructions are highly
+              specific to the rendering environment: hints written for Windows's GDI rendering
+              engine would look wrong on Apple's Core Text, and vice versa. For two decades,
+              from roughly 1985 to 2005, the quality of on-screen type was determined largely by
+              how well it had been hinted and how forgiving the rendering engine was.
+            </p>
+
+            <blockquote class="pullquote">
+              <p>
+                Hinting was an act of translation: the type designer's intentions, whispered
+                through a rounding error.
+              </p>
+            </blockquote>
+
+            <p>
+              High-density screens changed everything. When Apple introduced the Retina display
+              in 2010, the pixel density was high enough that individual pixels were no longer
+              visible at normal reading distances. The rasterization problem largely dissolved:
+              at 220 pixels per inch, a letterform's curves could be represented faithfully.
+              Hinting became less important. The type wars — the fierce technical arguments about
+              rendering philosophy that had consumed the typography community for years — quietly
+              ended.
+            </p>
+
+            <p>
+              Variable fonts, which arrived in 2016 as an OpenType specification, were the
+              final gift of the digital era: a single font file that could contain an entire
+              family's worth of variation, interpolated smoothly across multiple axes. The type
+              designer could now build logic into the font itself — not just aesthetic logic, but
+              responsive logic, the understanding that a word headline needs to be set
+              differently from the same word in a caption. The font could adapt. It could think.
+            </p>
+          </div>
+
+          <figure class="section__figure">
+            <picture>
+              <source type="image/avif" srcset="assets/images/crt-type.avif" />
+              <img
+                src="assets/images/crt-type.webp"
+                alt="A close-up photograph of text displayed on an early CRT computer monitor, showing the distinctive pixel grid and scan lines that made digital type rendering a significant typographic challenge"
+                width="800"
+                height="560"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <figcaption>
+              Early CRT monitor text rendering, c. 1990. The pixel grid at 72 dpi required
+              aggressive hinting.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="section__closer">
+          <hr class="section-rule" />
+        </div>
+      </article>
+
+      <!-- ════════════════════════════════════════════════
+           06 — What Remains
+      ════════════════════════════════════════════════ -->
+      <article class="essay-section" id="what-remains" aria-labelledby="s06-heading">
+        <div class="section__header">
+          <span class="section__number" aria-hidden="true">06</span>
+          <h2 id="s06-heading" class="section-heading">What Remains</h2>
+          <p class="section__deck">
+            Why physical books persist, and what the typographic page offers that screens cannot
+          </p>
+        </div>
+
+        <div class="section__body">
+          <div class="section__text">
+            <p class="section__lead has-dropcap">
+              Walk into any good bookshop and you will feel it before you understand it: the
+              particular quality of attention the place demands. Not the sharp focus of a screen,
+              but something slower and more lateral — a willingness to be interrupted by
+              something you were not looking for.
+            </p>
+
+            <p>
+              The physical book has been declared dead at regular intervals for the past thirty
+              years. It has not died. Global book sales, in unit terms, have been roughly stable
+              since the early 2010s. The e-reader was supposed to replace the codex; instead it
+              joined it, occupying a different space in the reading life of those who adopted it.
+              People read differently on paper and on screen — not better or worse in any simple
+              sense, but differently, in ways that researchers are still characterizing.
+            </p>
+
+            <p>
+              Part of what the physical page offers is resistance. You cannot scroll. You cannot
+              follow a link. The text does not update while you read it. These constraints, which
+              sound like deficiencies, are actually affordances: they create a kind of
+              seriousness around the act of reading. You chose this book. You brought it to this
+              chair. You will stay with it.
+            </p>
+
+            <blockquote class="pullquote">
+              <p>
+                The book survived the scroll, the codex survived the tablet. What the physical
+                page offers is not information. It is presence.
+              </p>
+            </blockquote>
+
+            <p>
+              Typography, meanwhile, has never been richer or more varied. The tools available
+              to the type designer in 2026 — variable axes, optical sizing, color fonts,
+              sophisticated OpenType features — represent capabilities that Gutenberg, Garamond,
+              and Tschichold could not have imagined. What we lack is not the means but the
+              patience: the willingness to study the craft long enough to use those means
+              without showing them.
+            </p>
+
+            <p>
+              The best pages of this century, like the best pages of any century, will be the
+              ones where the reader never once thinks about the type. They will be absorbed in
+              the text, unaware that every spacing decision, every optical adjustment, every
+              careful calibration of measure and leading was made in the service of exactly that
+              absorption. That is the ambition. That is what the typographic page has always
+              been for.
+            </p>
+
+            <span class="section-ornament" aria-hidden="true">§</span>
+          </div>
+
+          <figure class="section__figure">
+            <picture>
+              <source type="image/avif" srcset="assets/images/library-shelf.avif" />
+              <img
+                src="assets/images/library-shelf.webp"
+                alt="A close-up photograph of book spines on a wooden library shelf, showing the worn typography and varied design of books from different decades, suggesting the accumulated weight of printed culture"
+                width="800"
+                height="560"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <figcaption>
+              A working library. The spine is the cover's argument.
+            </figcaption>
+          </figure>
+        </div>
+      </article>
+    </main>
+
+    <!-- ── Footer ── -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="site-footer__inner">
+        <p class="site-footer__colophon">
+          Set in Fraunces, Newsreader, and DM Mono. An original work.
+        </p>
+        <p class="site-footer__year">
+          <span aria-hidden="true">©</span
+          ><span class="sr-only">Copyright</span> 2026
+        </p>
+      </div>
+    </footer>
+
+    <!-- No render-blocking scripts — deferred module at end of body -->
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

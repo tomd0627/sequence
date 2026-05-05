@@ -1,0 +1,49 @@
+/* ═══════════════════════════════════════════════════════
+   REDUCED MOTION — Complete motion kill-switch
+   Applies final states statically for all animated elements
+═══════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Restore final states so content is always visible */
+
+  .section-heading {
+    font-variation-settings: "wght" 700, "SOFT" 20, "opsz" 48;
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  .section__number {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  .section__deck {
+    opacity: 1;
+  }
+
+  .section__figure {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  .section__text > p {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  .hero__title span,
+  .hero__subtitle,
+  .hero__scroll-cue {
+    opacity: 1;
+    translate: 0 0;
+  }
+}

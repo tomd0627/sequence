@@ -1,0 +1,184 @@
+/* ═══════════════════════════════════════════════════════
+   ANIMATIONS — CSS scroll-driven and Intersection Observer
+
+   Three tiers:
+   1. Pure CSS scroll-driven (animation-timeline)
+   2. IO-triggered class toggles (.is-visible, .is-active)
+   3. JS → CSS custom property → font-variation-settings
+═══════════════════════════════════════════════════════ */
+
+/* ── Reading progress bar ── */
+
+@keyframes grow-bar {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.reading-progress__bar {
+  animation: grow-bar linear both;
+  animation-timeline: scroll(root block);
+}
+
+/* ── Section heading bloom (wght + SOFT + opsz) ── */
+
+@keyframes heading-bloom {
+  from {
+    font-variation-settings: "wght" 200, "SOFT" 0, "opsz" 9;
+    opacity: 0.2;
+    translate: 0 1rem;
+  }
+
+  to {
+    font-variation-settings: "wght" 700, "SOFT" 20, "opsz" 48;
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.section-heading {
+  animation: heading-bloom linear both;
+  animation-timeline: view(block);
+  animation-range: entry 0% entry 55%;
+}
+
+/* ── Section number appear ── */
+
+@keyframes number-appear {
+  from {
+    opacity: 0;
+    translate: 0 0.75rem;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.section__number {
+  animation: number-appear linear both;
+  animation-timeline: view(block);
+  animation-range: entry 5% entry 40%;
+}
+
+/* ── Section deck appear ── */
+
+@keyframes deck-appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.section__deck {
+  animation: deck-appear linear both;
+  animation-timeline: view(block);
+  animation-range: entry 15% entry 50%;
+}
+
+/* ── HR draw across page ── */
+
+@keyframes rule-draw {
+  from {
+    scale: 0 1;
+  }
+
+  to {
+    scale: 1 1;
+  }
+}
+
+hr,
+.section-rule {
+  transform-origin: inline-start center;
+  animation: rule-draw linear both;
+  animation-timeline: view(block);
+  animation-range: entry 10% entry 50%;
+}
+
+/* ── Section figure: IO-driven reveal (.is-visible class) ── */
+
+.js-enabled .section__figure {
+  opacity: 0;
+  translate: 0 2rem;
+  transition:
+    opacity 700ms var(--ease-print),
+    translate 700ms var(--ease-print);
+}
+
+.js-enabled .essay-section.is-visible .section__figure {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* ── Section text paragraphs: staggered reveal ── */
+
+@keyframes para-rise {
+  from {
+    opacity: 0;
+    translate: 0 0.5rem;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.section__text > p {
+  animation: para-rise linear both;
+  animation-timeline: view(block);
+  animation-range: entry 5% entry 35%;
+}
+
+/* ── Hero title: staggered reveal on load (JS-gated) ── */
+
+.js-enabled .hero__title span {
+  display: block;
+  overflow: hidden;
+}
+
+@keyframes title-reveal {
+  from {
+    opacity: 0;
+    translate: 0 100%;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.js-enabled .hero__title span:nth-child(1) {
+  animation: title-reveal 800ms var(--ease-print) both;
+  animation-delay: 100ms;
+}
+
+.js-enabled .hero__title span:nth-child(2) {
+  animation: title-reveal 800ms var(--ease-print) both;
+  animation-delay: 220ms;
+}
+
+.js-enabled .hero__title span:nth-child(3) {
+  animation: title-reveal 800ms var(--ease-print) both;
+  animation-delay: 340ms;
+}
+
+.js-enabled .hero__subtitle {
+  animation: para-rise 700ms var(--ease-print) both;
+  animation-delay: 500ms;
+}
+
+.js-enabled .hero__scroll-cue {
+  animation: para-rise 700ms var(--ease-print) both;
+  animation-delay: 700ms;
+}

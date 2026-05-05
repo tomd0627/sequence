@@ -1,0 +1,28 @@
+/* ═══════════════════════════════════════════════════════
+   SECTIONS — Per-section backgrounds and overrides
+   Even sections (02, 04, 06) use --color-paper-warm
+═══════════════════════════════════════════════════════ */
+
+/* ── Section 02: The Page as Canvas ── */
+
+#the-page-as-canvas {
+  background-color: var(--color-paper-warm);
+}
+
+/* ── Section 04: Reading ── */
+
+#reading {
+  background-color: var(--color-paper-warm);
+}
+
+/* ── Section 06: What Remains ── */
+
+#what-remains {
+  background-color: var(--color-paper-warm);
+}
+
+/* ── Interlude rule between sections ── */
+
+.essay-section + .essay-section {
+  border-block-start: 1px solid var(--color-rule);
+}
