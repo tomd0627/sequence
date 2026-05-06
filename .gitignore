@@ -25,6 +25,7 @@ Thumbs.db
 
 # Lighthouse reports
 lighthouse-report.html
+lighthouse-report.json
 
 # Logs
 *.log

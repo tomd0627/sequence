@@ -6,7 +6,7 @@ Last updated: 2026-05-05. **Phases 1–4 complete. Phase 5 is next.**
 
 ## What this project is
 
-A single-page scroll-driven editorial essay: *Pressmark: Notes on the Typographic Page*. Six sections covering typography history from Gutenberg to variable fonts. Built in vanilla HTML/CSS/JS — no framework, no bundler. Purpose: demonstrate platform-native CSS craft (scroll-driven animations, variable fonts, CSS nesting, logical properties) for developer/designer recruiting.
+A single-page scroll-driven editorial essay: _Pressmark: Notes on the Typographic Page_. Six sections covering typography history from Gutenberg to variable fonts. Built in vanilla HTML/CSS/JS — no framework, no bundler. Purpose: demonstrate platform-native CSS craft (scroll-driven animations, variable fonts, CSS nesting, logical properties) for developer/designer recruiting.
 
 Deploy target: Netlify, `publish = "src"`.
 
@@ -28,6 +28,7 @@ npm run format    → runs Prettier
 1. **Check `package.json`** — it may exist from a previous session. Audit what's already there before installing.
 
 2. **Install devDependencies**:
+
    ```
    prettier
    eslint  @eslint/js
@@ -50,6 +51,7 @@ npm run format    → runs Prettier
    - Targets HTML, CSS, JS
 
 6. **Wire `lint-staged`** (in `package.json`):
+
    ```json
    "lint-staged": {
      "src/**/*.js": ["eslint --fix", "prettier --write"],
@@ -61,6 +63,7 @@ npm run format    → runs Prettier
 7. **Initialize Husky** and add pre-commit hook running `lint-staged`
 
 8. **Add npm scripts** to `package.json`:
+
    ```json
    "scripts": {
      "lint": "eslint src/js && stylelint src/css",
@@ -76,12 +79,14 @@ npm run format    → runs Prettier
 ## Current state of each file
 
 ### HTML — `src/index.html`
+
 - Complete. All 6 sections with full essay copy, pullquotes, figures, and closing ornament.
 - 6 `<picture>` elements each with a single `<img src="assets/images/xxx.svg">` (no AVIF/WebP sources).
 - `width="800" height="450"` on all images (16:9, matching CSS `aspect-ratio: 16/9`).
 - All JS loaded via `<script type="module" src="js/main.js">` at end of body.
 
 ### CSS — `src/css/`
+
 - `tokens.css` — all custom properties (colours, type scale, spacing, easing, layout vars)
 - `reset.css` — modern minimal reset
 - `typography.css` — @font-face + base styles; `p` uses `font-variation-settings: "wght" 400, "opsz" var(--p-opsz)`
@@ -92,6 +97,7 @@ npm run format    → runs Prettier
 - `reduced-motion.css` — complete kill-switch + explicit final states for all animated elements
 
 ### JS — `src/js/`
+
 - `main.js` — adds `.js-enabled` to `<html>`, calls all four `init*()` functions
 - `nav.js` — adds `.is-scrolled` to `.site-header` after 80px scroll
 - `observer.js` — IntersectionObserver on `.essay-section` → `.is-visible`; updates `aria-current` on nav links
@@ -99,19 +105,22 @@ npm run format    → runs Prettier
 - `progress.js` — scroll listener; updates `aria-valuenow` on `.reading-progress` progressbar
 
 ### Images — `src/assets/images/`
+
 All 6 are hand-coded SVG typographic specimens (viewBox 0 0 800 450, 16:9):
 
-| File | What it shows |
-|---|---|
-| `gutenberg-press.svg` | 3×3 grid of lead type "sorts" spelling GUTENBERG; first G in vermilion |
-| `tschichold-grid.svg` | Asymmetric grid construction lines + *Die neue Typographie* title block |
+| File                    | What it shows                                                                             |
+| ----------------------- | ----------------------------------------------------------------------------------------- |
+| `gutenberg-press.svg`   | 3×3 grid of lead type "sorts" spelling GUTENBERG; first G in vermilion                    |
+| `tschichold-grid.svg`   | Asymmetric grid construction lines + _Die neue Typographie_ title block                   |
 | `fraunces-specimen.svg` | Three-panel weight axis: outlined A (wght 200) → semi-filled (wght 500) → bold (wght 700) |
-| `eye-tracking.svg` | Essay prose from §04 with fixation circles + saccade polylines overlaid |
-| `crt-type.svg` | Dark CRT screen with rasterized "R" pixel blocks + scan-line pattern overlay |
-| `library-shelf.svg` | 13 named book spines; "Pressmark" spine in vermilion |
+| `eye-tracking.svg`      | Essay prose from §04 with fixation circles + saccade polylines overlaid                   |
+| `crt-type.svg`          | Dark CRT screen with rasterized "R" pixel blocks + scan-line pattern overlay              |
+| `library-shelf.svg`     | 13 named book spines; "Pressmark" spine in vermilion                                      |
 
 ### Fonts — `src/assets/fonts/`
+
 10 woff2 files. All self-hosted, no CDN dependency:
+
 - Fraunces: `fraunces-latin-normal.woff2`, `fraunces-latin-italic.woff2`, `fraunces-latin-ext-normal.woff2`, `fraunces-latin-ext-italic.woff2`
 - Newsreader: same four pattern
 - DM Mono: `dm-mono-latin-normal.woff2`, `dm-mono-latin-ext-normal.woff2`
@@ -122,21 +131,21 @@ All 6 are hand-coded SVG typographic specimens (viewBox 0 0 800 450, 16:9):
 
 All animations are in `animations.css`. Reduced-motion overrides are in `reduced-motion.css`.
 
-| Element | Mechanism | Keyframes |
-|---|---|---|
-| Reading progress bar | `scroll(root block)` | `grow-bar` (scaleX 0→1) |
-| `.section-heading` | `view(block)` entry 0–55% | `heading-bloom` (wght/SOFT/opsz + opacity + translate) |
-| `.section__number` | `view(block)` entry 5–40% | `number-appear` (opacity + translate Y) |
-| `.section__deck` | `view(block)` entry 15–50% | `deck-appear` (opacity) |
-| `hr, .section-rule` | `view(block)` entry 10–50% | `rule-draw` (scale 0 1 → 1 1) |
-| `.section__figure` | IO `.is-visible` | CSS transition (opacity + translate Y) |
-| `.section__text > p` | `view(block)` entry 5–35% | `para-rise` (opacity + translate Y) |
-| `.pullquote` | `view(block)` entry 15–55% | `quote-rise` (opacity + translate X from left) |
-| `.section-ornament` | `view(block)` entry 40–70% | `deck-appear` (opacity) |
-| `.hero__title span` (×3) | time-based, delays 100/220/340ms | `title-reveal` (opacity + translate Y 100%) |
-| `.hero__subtitle` | time-based, delay 500ms | `para-rise` |
-| `.hero__scroll-cue` | time-based, delay 700ms | `para-rise` |
-| `.hero__scroll-text` | infinite loop, delay 2s | `cue-breathe` (opacity 1→0.35→1) |
+| Element                  | Mechanism                        | Keyframes                                              |
+| ------------------------ | -------------------------------- | ------------------------------------------------------ |
+| Reading progress bar     | `scroll(root block)`             | `grow-bar` (scaleX 0→1)                                |
+| `.section-heading`       | `view(block)` entry 0–55%        | `heading-bloom` (wght/SOFT/opsz + opacity + translate) |
+| `.section__number`       | `view(block)` entry 5–40%        | `number-appear` (opacity + translate Y)                |
+| `.section__deck`         | `view(block)` entry 15–50%       | `deck-appear` (opacity)                                |
+| `hr, .section-rule`      | `view(block)` entry 10–50%       | `rule-draw` (scale 0 1 → 1 1)                          |
+| `.section__figure`       | IO `.is-visible`                 | CSS transition (opacity + translate Y)                 |
+| `.section__text > p`     | `view(block)` entry 5–35%        | `para-rise` (opacity + translate Y)                    |
+| `.pullquote`             | `view(block)` entry 15–55%       | `quote-rise` (opacity + translate X from left)         |
+| `.section-ornament`      | `view(block)` entry 40–70%       | `deck-appear` (opacity)                                |
+| `.hero__title span` (×3) | time-based, delays 100/220/340ms | `title-reveal` (opacity + translate Y 100%)            |
+| `.hero__subtitle`        | time-based, delay 500ms          | `para-rise`                                            |
+| `.hero__scroll-cue`      | time-based, delay 700ms          | `para-rise`                                            |
+| `.hero__scroll-text`     | infinite loop, delay 2s          | `cue-breathe` (opacity 1→0.35→1)                       |
 
 ---
 

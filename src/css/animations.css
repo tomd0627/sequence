@@ -28,19 +28,25 @@
 
 @keyframes heading-bloom {
   from {
-    font-variation-settings: "wght" 200, "SOFT" 0, "opsz" 9;
-    opacity: 0.2;
+    font-variation-settings:
+      "wght" 200,
+      "SOFT" 0,
+      "opsz" 9;
+    opacity: 0;
     translate: 0 1rem;
   }
 
   to {
-    font-variation-settings: "wght" 700, "SOFT" 20, "opsz" 48;
+    font-variation-settings:
+      "wght" 700,
+      "SOFT" 20,
+      "opsz" 48;
     opacity: 1;
     translate: 0 0;
   }
 }
 
-.section-heading {
+.js-enabled .section-heading {
   animation: heading-bloom linear both;
   animation-timeline: view(block);
   animation-range: entry 0% entry 55%;
@@ -108,10 +114,10 @@ hr,
 
 .js-enabled .section__figure {
   opacity: 0;
-  translate: 0 2rem;
   transition:
     opacity 700ms var(--ease-print),
     translate 700ms var(--ease-print);
+  translate: 0 2rem;
 }
 
 .js-enabled .essay-section.is-visible .section__figure {
@@ -213,16 +219,13 @@ hr,
 /* ── Hero scroll cue: breathe loop after reveal ── */
 
 @keyframes cue-breathe {
-  0% {
-    opacity: 1;
+  0%,
+  100% {
+    translate: 0 0;
   }
 
   50% {
-    opacity: 0.35;
-  }
-
-  100% {
-    opacity: 1;
+    translate: 0 0.35rem;
   }
 }
 

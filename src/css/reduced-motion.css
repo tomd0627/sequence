@@ -7,16 +7,19 @@
   *,
   *::before,
   *::after {
+    transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 
   /* Restore final states so content is always visible */
 
   .section-heading {
-    font-variation-settings: "wght" 700, "SOFT" 20, "opsz" 48;
+    font-variation-settings:
+      "wght" 700,
+      "SOFT" 20,
+      "opsz" 48;
     opacity: 1;
     translate: 0 0;
   }

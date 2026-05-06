@@ -54,11 +54,11 @@ src/
 
 ## Variable Font Axes
 
-| Font | Axes | Used for |
-|---|---|---|
-| Fraunces | `wght` 100–900, `SOFT` 0–100, `opsz` 9–144 | Headlines, dropcaps, pullquotes |
-| Newsreader | `wght` 200–800, `opsz` 6–72 | All body text |
-| DM Mono | fixed 400 | Captions, section numbers, labels |
+| Font       | Axes                                       | Used for                          |
+| ---------- | ------------------------------------------ | --------------------------------- |
+| Fraunces   | `wght` 100–900, `SOFT` 0–100, `opsz` 9–144 | Headlines, dropcaps, pullquotes   |
+| Newsreader | `wght` 200–800, `opsz` 6–72                | All body text                     |
+| DM Mono    | fixed 400                                  | Captions, section numbers, labels |
 
 Fraunces scroll animation: `wght` 200→700, `SOFT` 0→20, `opsz` 9→48 via `animation-timeline: view(block)`.
 Newsreader scroll effect: `opsz` 12→18 via `--p-opsz` custom property set by `font-axes.js`.
@@ -69,8 +69,8 @@ Newsreader scroll effect: `opsz` 12→18 via `--p-opsz` custom property set by `
 2. Core HTML/CSS scaffold — DONE
 3. Scroll animations + variable font transitions — DONE
 4. Final editorial pass (copy, images, favicon) — DONE
-5. Pre-commit tooling (Husky, ESLint, Stylelint, Prettier) — pending
-6. Recruiter audit + pre-deploy (Lighthouse) + README — pending
+5. Pre-commit tooling (Husky, ESLint, Stylelint, Prettier) — DONE
+6. Recruiter audit + pre-deploy (Lighthouse) + README — DONE
 
 ## Commands
 

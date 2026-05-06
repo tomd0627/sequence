@@ -10,7 +10,7 @@
   --color-paper-deep: #e3dbc8;
   --color-ink: #1a1610;
   --color-ink-secondary: #3d3528;
-  --color-ink-muted: #7a6f61;
+  --color-ink-muted: #64574a;
   --color-rule: #c9bfad;
   --color-accent: #c0432b;
   --color-accent-dark: #8f2d1a;
@@ -42,9 +42,9 @@
   --space-48: 12rem;
 
   /* ── Font families ───────────────────────────────────── */
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-body: "Newsreader", Georgia, "Times New Roman", serif;
-  --font-mono: "DM Mono", "Courier New", Courier, monospace;
+  --font-display: "Fraunces", georgia, "Times New Roman", serif;
+  --font-body: "Newsreader", georgia, "Times New Roman", serif;
+  --font-mono: "DM Mono", "Courier New", courier, monospace;
 
   /* ── Line height ─────────────────────────────────────── */
   --leading-tight: 1.15;

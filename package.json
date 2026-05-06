@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Pressmark — a scroll-driven editorial experience built in vanilla HTML, CSS, and JS",
   "private": true,
+  "type": "module",
   "scripts": {
     "prepare": "husky",
     "serve": "npx serve src -l 3000",

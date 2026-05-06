@@ -6,9 +6,11 @@
 
 .section__lead {
   font-size: var(--text-md);
-  font-variation-settings: "wght" 500, "opsz" 20;
-  color: var(--color-ink-secondary);
+  font-variation-settings:
+    "wght" 500,
+    "opsz" 20;
   line-height: var(--leading-snug);
+  color: var(--color-ink-secondary);
 }
 
 /* ── Dropcap ── */
@@ -19,24 +21,30 @@
   margin-inline-end: 0.04em;
   font-family: var(--font-display);
   font-size: 4.5em;
-  font-variation-settings: "wght" 700, "SOFT" 80, "opsz" 72;
-  color: var(--color-accent);
+  font-variation-settings:
+    "wght" 700,
+    "SOFT" 80,
+    "opsz" 72;
   line-height: 0.82;
+  color: var(--color-accent);
 }
 
 /* ── Pullquote ── */
 
 .pullquote {
   grid-column: text;
-  margin-block: var(--space-12);
   padding-inline-start: var(--space-6);
-  border-inline-start: 3px solid var(--color-accent);
+  margin-block: var(--space-12);
   font-family: var(--font-display);
   font-size: clamp(var(--text-lg), 3vw, var(--text-3xl));
+  font-variation-settings:
+    "wght" 300,
+    "SOFT" 30,
+    "opsz" 36;
   font-style: italic;
-  font-variation-settings: "wght" 300, "SOFT" 30, "opsz" 36;
-  color: var(--color-ink-secondary);
   line-height: var(--leading-snug);
+  color: var(--color-ink-secondary);
+  border-inline-start: 3px solid var(--color-accent);
 
   p {
     margin: 0;
@@ -46,7 +54,7 @@
   }
 }
 
-@media (min-width: 64rem) {
+@media (width >= 64rem) {
   .pullquote {
     grid-column: wide-start / text-end;
     margin-block: var(--space-16);
@@ -69,8 +77,8 @@
 
   img {
     display: block;
-    block-size: 100%;
     inline-size: 100%;
+    block-size: 100%;
     object-fit: cover;
     transition: transform 600ms var(--ease-print);
   }
@@ -95,8 +103,8 @@ hr {
   display: block;
   block-size: 1px;
   margin-block: var(--space-8);
-  border: none;
   background-color: var(--color-rule);
+  border: none;
 }
 
 /* ── Closing ornament ── */
@@ -106,7 +114,10 @@ hr {
   margin-block: var(--space-12);
   font-family: var(--font-display);
   font-size: var(--text-base);
-  font-variation-settings: "wght" 700, "SOFT" 60, "opsz" 18;
+  font-variation-settings:
+    "wght" 700,
+    "SOFT" 60,
+    "opsz" 18;
   color: var(--color-accent);
   text-align: center;
 }
