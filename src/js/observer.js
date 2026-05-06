@@ -12,6 +12,7 @@ export function initSectionObserver() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       entry.target.classList.toggle("is-visible", entry.isIntersecting);
+      if (entry.isIntersecting) entry.target.classList.add("has-been-visible");
 
       if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
         const id = entry.target.id;

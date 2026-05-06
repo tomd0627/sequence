@@ -1,10 +1,10 @@
 /* ═══════════════════════════════════════════════════════
-   ANIMATIONS — CSS scroll-driven and Intersection Observer
+   ANIMATIONS
 
-   Three tiers:
-   1. Pure CSS scroll-driven (animation-timeline)
-   2. IO-triggered class toggles (.is-visible, .is-active)
-   3. JS → CSS custom property → font-variation-settings
+   Two tiers:
+   1. IO-triggered transitions (.has-been-visible) — base, all browsers
+   2. Scroll-driven via animation-timeline — @supports enhancement
+      (Chromium 115+, Safari 18+; ignored by Firefox)
 ═══════════════════════════════════════════════════════ */
 
 /* ── Reading progress bar ── */
@@ -24,93 +24,79 @@
   animation-timeline: scroll(root block);
 }
 
+/* ════════════════════════════════════════════════════════
+   BASE: IO-TRIGGERED TRANSITIONS
+   .has-been-visible is added once (fire-and-hold) when an
+   .essay-section first enters the viewport via observer.js
+════════════════════════════════════════════════════════ */
+
 /* ── Section heading bloom (wght + SOFT + opsz) ── */
 
-@keyframes heading-bloom {
-  from {
-    font-variation-settings:
-      "wght" 200,
-      "SOFT" 0,
-      "opsz" 9;
-    opacity: 0;
-    translate: 0 1rem;
-  }
-
-  to {
-    font-variation-settings:
-      "wght" 700,
-      "SOFT" 20,
-      "opsz" 48;
-    opacity: 1;
-    translate: 0 0;
-  }
+.js-enabled .section-heading {
+  font-variation-settings:
+    "wght" 200,
+    "SOFT" 0,
+    "opsz" 9;
+  opacity: 0;
+  transition:
+    font-variation-settings 700ms var(--ease-print),
+    opacity 700ms var(--ease-print),
+    translate 700ms var(--ease-print);
+  translate: 0 1rem;
 }
 
-.js-enabled .section-heading {
-  animation: heading-bloom linear both;
-  animation-timeline: view(block);
-  animation-range: entry 0% entry 55%;
+.js-enabled .essay-section.has-been-visible .section-heading {
+  font-variation-settings:
+    "wght" 700,
+    "SOFT" 20,
+    "opsz" 48;
+  opacity: 1;
+  translate: 0 0;
 }
 
 /* ── Section number appear ── */
 
-@keyframes number-appear {
-  from {
-    opacity: 0;
-    translate: 0 0.75rem;
-  }
-
-  to {
-    opacity: 1;
-    translate: 0 0;
-  }
+.js-enabled .section__number {
+  opacity: 0;
+  transition:
+    opacity 500ms var(--ease-print),
+    translate 500ms var(--ease-print);
+  translate: 0 0.75rem;
 }
 
-.section__number {
-  animation: number-appear linear both;
-  animation-timeline: view(block);
-  animation-range: entry 5% entry 40%;
+.js-enabled .essay-section.has-been-visible .section__number {
+  opacity: 1;
+  translate: 0 0;
 }
 
 /* ── Section deck appear ── */
 
-@keyframes deck-appear {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+.js-enabled .section__deck {
+  opacity: 0;
+  transition: opacity 600ms var(--ease-print) 100ms;
 }
 
-.section__deck {
-  animation: deck-appear linear both;
-  animation-timeline: view(block);
-  animation-range: entry 15% entry 50%;
+.js-enabled .essay-section.has-been-visible .section__deck {
+  opacity: 1;
 }
 
 /* ── HR draw across page ── */
 
-@keyframes rule-draw {
-  from {
-    scale: 0 1;
-  }
-
-  to {
-    scale: 1 1;
-  }
-}
-
 hr,
 .section-rule {
   transform-origin: inline-start center;
-  animation: rule-draw linear both;
-  animation-timeline: view(block);
-  animation-range: entry 10% entry 50%;
 }
 
-/* ── Section figure: IO-driven reveal (.is-visible class) ── */
+.js-enabled .section-rule {
+  transition: scale 700ms var(--ease-print) 150ms;
+  scale: 0 1;
+}
+
+.js-enabled .essay-section.has-been-visible .section-rule {
+  scale: 1 1;
+}
+
+/* ── Section figure: IO-driven reveal ── */
 
 .js-enabled .section__figure {
   opacity: 0;
@@ -120,32 +106,75 @@ hr,
   translate: 0 2rem;
 }
 
-.js-enabled .essay-section.is-visible .section__figure {
+.js-enabled .essay-section.has-been-visible .section__figure {
   opacity: 1;
   translate: 0 0;
 }
 
 /* ── Section text paragraphs: staggered reveal ── */
 
-@keyframes para-rise {
-  from {
-    opacity: 0;
-    translate: 0 0.5rem;
-  }
-
-  to {
-    opacity: 1;
-    translate: 0 0;
-  }
+.js-enabled .section__text > p {
+  opacity: 0;
+  transition:
+    opacity 500ms var(--ease-print),
+    translate 500ms var(--ease-print);
+  translate: 0 0.5rem;
 }
 
-.section__text > p {
-  animation: para-rise linear both;
-  animation-timeline: view(block);
-  animation-range: entry 5% entry 35%;
+.js-enabled .section__text > p:nth-child(2) {
+  transition-delay: 70ms;
 }
 
-/* ── Hero title: staggered reveal on load (JS-gated) ── */
+.js-enabled .section__text > p:nth-child(3) {
+  transition-delay: 140ms;
+}
+
+.js-enabled .section__text > p:nth-child(4) {
+  transition-delay: 210ms;
+}
+
+.js-enabled .section__text > p:nth-child(5) {
+  transition-delay: 280ms;
+}
+
+.js-enabled .section__text > p:nth-child(6) {
+  transition-delay: 350ms;
+}
+
+.js-enabled .essay-section.has-been-visible .section__text > p {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* ── Pullquote: slide in from inline-start ── */
+
+.js-enabled .pullquote {
+  opacity: 0;
+  transition:
+    opacity 600ms var(--ease-print) 200ms,
+    translate 600ms var(--ease-print) 200ms;
+  translate: -1.5rem 0;
+}
+
+.js-enabled .essay-section.has-been-visible .pullquote {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* ── Section ornament reveal ── */
+
+.js-enabled .section-ornament {
+  opacity: 0;
+  transition: opacity 600ms var(--ease-print) 400ms;
+}
+
+.js-enabled .essay-section.has-been-visible .section-ornament {
+  opacity: 1;
+}
+
+/* ════════════════════════════════════════════════════════
+   HERO: time-based reveals on load (JS-gated)
+════════════════════════════════════════════════════════ */
 
 .js-enabled .hero__title span {
   display: block;
@@ -156,6 +185,18 @@ hr,
   from {
     opacity: 0;
     translate: 0 100%;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes para-rise {
+  from {
+    opacity: 0;
+    translate: 0 0.5rem;
   }
 
   to {
@@ -188,34 +229,6 @@ hr,
   animation: para-rise 700ms var(--ease-print) 700ms both;
 }
 
-/* ── Pullquote: slide in from inline-start ── */
-
-@keyframes quote-rise {
-  from {
-    opacity: 0;
-    translate: -1.5rem 0;
-  }
-
-  to {
-    opacity: 1;
-    translate: 0 0;
-  }
-}
-
-.pullquote {
-  animation: quote-rise linear both;
-  animation-timeline: view(block);
-  animation-range: entry 15% entry 55%;
-}
-
-/* ── Section ornament reveal ── */
-
-.section-ornament {
-  animation: deck-appear linear both;
-  animation-timeline: view(block);
-  animation-range: entry 40% entry 70%;
-}
-
 /* ── Hero scroll cue: breathe loop after reveal ── */
 
 @keyframes cue-breathe {
@@ -231,4 +244,132 @@ hr,
 
 .js-enabled .hero__scroll-text {
   animation: cue-breathe 3s ease-in-out 2s infinite;
+}
+
+/* ════════════════════════════════════════════════════════
+   SCROLL-DRIVEN ENHANCEMENT (Chromium 115+, Safari 18+)
+   Overrides IO transitions with scroll-position-linked
+   animations. Firefox ignores this entire block.
+════════════════════════════════════════════════════════ */
+
+@keyframes heading-bloom {
+  from {
+    font-variation-settings:
+      "wght" 200,
+      "SOFT" 0,
+      "opsz" 9;
+    opacity: 0;
+    translate: 0 1rem;
+  }
+
+  to {
+    font-variation-settings:
+      "wght" 700,
+      "SOFT" 20,
+      "opsz" 48;
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes number-appear {
+  from {
+    opacity: 0;
+    translate: 0 0.75rem;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes deck-appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rule-draw {
+  from {
+    scale: 0 1;
+  }
+
+  to {
+    scale: 1 1;
+  }
+}
+
+@keyframes quote-rise {
+  from {
+    opacity: 0;
+    translate: -1.5rem 0;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .js-enabled .section-heading {
+    transition: none;
+    animation: heading-bloom linear both;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 40%;
+  }
+
+  .js-enabled .section__number {
+    transition: none;
+    animation: number-appear linear both;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 25%;
+  }
+
+  .js-enabled .section__deck {
+    transition: none;
+    animation: deck-appear linear both;
+    animation-timeline: view(block);
+    animation-range: cover 5% cover 30%;
+  }
+
+  .js-enabled .section-rule {
+    transition: none;
+    animation: rule-draw linear both;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 30%;
+  }
+
+  .js-enabled .section__figure {
+    transition: none;
+    animation: para-rise linear both;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 35%;
+  }
+
+  .js-enabled .section__text > p {
+    transition: none;
+    animation: para-rise linear both;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 30%;
+  }
+
+  .js-enabled .pullquote {
+    transition: none;
+    animation: quote-rise linear both;
+    animation-timeline: view(block);
+    animation-range: cover 5% cover 40%;
+  }
+
+  .js-enabled .section-ornament {
+    transition: none;
+    animation: deck-appear linear both;
+    animation-timeline: view(block);
+    animation-range: cover 15% cover 55%;
+  }
 }
