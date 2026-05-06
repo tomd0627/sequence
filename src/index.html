@@ -55,25 +55,52 @@
     <header class="site-header" role="banner">
       <div class="site-header__inner">
         <span class="site-header__wordmark">Pressmark</span>
-        <nav class="section-nav" aria-label="Essay sections">
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="section-nav"
+          aria-label="Open navigation"
+        >
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
+        <nav id="section-nav" class="section-nav" aria-label="Essay sections">
           <ol role="list">
             <li>
-              <a href="#the-black-art" aria-label="Section 01: The Black Art">01</a>
+              <a href="#the-black-art" aria-label="Section 01: The Black Art">
+                <span class="section-nav__num">01</span>
+                <span class="section-nav__title">The Black Art</span>
+              </a>
             </li>
             <li>
-              <a href="#the-page-as-canvas" aria-label="Section 02: The Page as Canvas">02</a>
+              <a href="#the-page-as-canvas" aria-label="Section 02: The Page as Canvas">
+                <span class="section-nav__num">02</span>
+                <span class="section-nav__title">The Page as Canvas</span>
+              </a>
             </li>
             <li>
-              <a href="#the-face" aria-label="Section 03: The Face">03</a>
+              <a href="#the-face" aria-label="Section 03: The Face">
+                <span class="section-nav__num">03</span>
+                <span class="section-nav__title">The Face</span>
+              </a>
             </li>
             <li>
-              <a href="#reading" aria-label="Section 04: Reading">04</a>
+              <a href="#reading" aria-label="Section 04: Reading">
+                <span class="section-nav__num">04</span>
+                <span class="section-nav__title">Reading</span>
+              </a>
             </li>
             <li>
-              <a href="#digital" aria-label="Section 05: Digital">05</a>
+              <a href="#digital" aria-label="Section 05: Digital">
+                <span class="section-nav__num">05</span>
+                <span class="section-nav__title">Digital</span>
+              </a>
             </li>
             <li>
-              <a href="#what-remains" aria-label="Section 06: What Remains">06</a>
+              <a href="#what-remains" aria-label="Section 06: What Remains">
+                <span class="section-nav__num">06</span>
+                <span class="section-nav__title">What Remains</span>
+              </a>
             </li>
           </ol>
         </nav>
