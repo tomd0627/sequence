@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Background — warm paper above shelf -->
+  <rect width="800" height="450" fill="#f5f0e8"/>
+  <!-- Shelf backing below shelf line -->
+  <rect y="360" width="800" height="90" fill="#ede7d9"/>
+  <!-- Caption strip -->
+  <rect y="408" width="800" height="42" fill="#e3dbc8"/>
+
+  <!-- Shelf surface and shadow -->
+  <rect y="360" width="800" height="10" fill="#c0b08a"/>
+  <rect y="370" width="800" height="5" fill="#1a1610" opacity="0.12"/>
+
+  <!-- Books — 13 volumes, x_start=70 -->
+  <!-- B1: "The Elements" w=42 h=255 -->
+  <rect x="70"  y="105" width="42" height="255" fill="#2e2820"/>
+  <rect x="70"  y="105" width="42" height="5"   fill="#d8cfc0" opacity="0.4"/>
+  <text transform="rotate(-90,91,232)" x="91" y="232" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif" font-size="9" fill="#c9bfad" letter-spacing="1">The Elements</text>
+
+  <!-- B2: "Die neue Typographie" w=60 h=275 -->
+  <rect x="116" y="85"  width="60" height="275" fill="#1a1610"/>
+  <rect x="116" y="85"  width="60" height="5"   fill="#d8cfc0" opacity="0.4"/>
+  <text transform="rotate(-90,146,222)" x="146" y="222" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif" font-size="9" fill="#c9bfad" letter-spacing="1">Die neue Typographie</text>
+
+  <!-- B3: "Typography" w=38 h=230 -->
+  <rect x="180" y="130" width="38" height="230" fill="#3d3528"/>
+  <rect x="180" y="130" width="38" height="5"   fill="#d8cfc0" opacity="0.4"/>
+  <text transform="rotate(-90,199,244)" x="199" y="244" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif" font-size="9" fill="#c9bfad" letter-spacing="1">Typography</text>
+
+  <!-- B4: "The Crystal Goblet" w=52 h=265 -->
+  <rect x="222" y="95"  width="52" height="265" fill="#1a1610"/>
+  <rect x="222" y="95"  width="52" height="5"   fill="#d8cfc0" opacity="0.4"/>
+  <text transform="rotate(-90,248,227)" x="248" y="227" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif" font-size="9" fill="#c9bfad" letter-spacing="1">The Crystal Goblet</text>
+
+  <!-- B5: "Pressmark" w=44 h=295 — ACCENT, the tallest book -->
+  <rect x="278" y="65"  width="44" height="295" fill="#8f2d1a"/>
+  <rect x="278" y="65"  width="44" height="5"   fill="#f5e0d0" opacity="0.5"/>
+  <text transform="rotate(-90,300,212)" x="300" y="212" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif" font-size="10" font-weight="700" fill="#f5e0d0" letter-spacing="2">Pressmark</text>
+
+  <!-- B6: "Detail in Typography" w=48 h=270 -->
+  <rect x="326" y="90"  width="48" height="270" fill="#2a2018"/>
+  <rect x="326" y="90"  width="48" height="5"   fill="#d8cfc0" opacity="0.4"/>
+  <text transform="rotate(-90,350,224)" x="350" y="224" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif" font-size="9" fill="#c9bfad" letter-spacing="1">Detail in Typography</text>
+
+  <!-- B7: "On Type Design" w=40 h=240 -->
+  <rect x="378" y="120" width="40" height="240" fill="#2e2820"/>
+  <rect x="378" y="120" width="40" height="5"   fill="#d8cfc0" opacity="0.4"/>
+  <text transform="rotate(-90,398,240)" x="398" y="240" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif" font-size="9" fill="#c9bfad" letter-spacing="1">On Type Design</text>
+
+  <!-- B8: "Thinking with Type" w=65 h=280 -->
+  <rect x="422" y="80"  width="65" height="280" fill="#1a1610"/>
+  <rect x="422" y="80"  width="65" height="5"   fill="#d8cfc0" opacity="0.4"/>
+  <text transform="rotate(-90,454,219)" x="454" y="219" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif" font-size="9" fill="#c9bfad" letter-spacing="1">Thinking with Type</text>
+
+  <!-- B9: "Stop Stealing Sheep" w=45 h=255 -->
+  <rect x="491" y="105" width="45" height="255" fill="#3d3528"/>
+  <rect x="491" y="105" width="45" height="5"   fill="#d8cfc0" opacity="0.4"/>
+  <text transform="rotate(-90,513,232)" x="513" y="232" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif" font-size="9" fill="#c9bfad" letter-spacing="1">Stop Stealing Sheep</text>
+
+  <!-- B10: "Letters of Credit" w=42 h=245 -->
+  <rect x="540" y="115" width="42" height="245" fill="#2a2018"/>
+  <rect x="540" y="115" width="42" height="5"   fill="#d8cfc0" opacity="0.4"/>
+  <text transform="rotate(-90,561,237)" x="561" y="237" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif" font-size="9" fill="#c9bfad" letter-spacing="1">Letters of Credit</text>
+
+  <!-- B11: "The Penguin Guide" w=48 h=260 -->
+  <rect x="586" y="100" width="48" height="260" fill="#2e2820"/>
+  <rect x="586" y="100" width="48" height="5"   fill="#d8cfc0" opacity="0.4"/>
+  <text transform="rotate(-90,610,229)" x="610" y="229" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif" font-size="9" fill="#c9bfad" letter-spacing="1">The Penguin Guide</text>
+
+  <!-- B12: "Robert Bringhurst" w=50 h=240 -->
+  <rect x="638" y="120" width="50" height="240" fill="#1a1610"/>
+  <rect x="638" y="120" width="50" height="5"   fill="#d8cfc0" opacity="0.4"/>
+  <text transform="rotate(-90,663,240)" x="663" y="240" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif" font-size="9" fill="#c9bfad" letter-spacing="1">Robert Bringhurst</text>
+
+  <!-- B13: "Fonts &amp; Encodings" w=38 h=255 -->
+  <rect x="692" y="105" width="38" height="255" fill="#3d3528"/>
+  <rect x="692" y="105" width="38" height="5"   fill="#d8cfc0" opacity="0.4"/>
+  <text transform="rotate(-90,711,232)" x="711" y="232" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif" font-size="9" fill="#c9bfad" letter-spacing="1">Fonts &amp; Encodings</text>
+
+  <!-- Caption rule + label -->
+  <line x1="70" y1="416" x2="730" y2="416" stroke="#c9bfad" stroke-width="1"/>
+  <text x="400" y="437" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-style="italic" fill="#7a6f61">A working library. The spine is the cover&#x2019;s argument.</text>
+</svg>

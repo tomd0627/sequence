@@ -179,6 +179,53 @@ hr,
 }
 
 .js-enabled .hero__scroll-cue {
-  animation: para-rise 700ms var(--ease-print) both;
-  animation-delay: 700ms;
+  animation: para-rise 700ms var(--ease-print) 700ms both;
+}
+
+/* ── Pullquote: slide in from inline-start ── */
+
+@keyframes quote-rise {
+  from {
+    opacity: 0;
+    translate: -1.5rem 0;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.pullquote {
+  animation: quote-rise linear both;
+  animation-timeline: view(block);
+  animation-range: entry 15% entry 55%;
+}
+
+/* ── Section ornament reveal ── */
+
+.section-ornament {
+  animation: deck-appear linear both;
+  animation-timeline: view(block);
+  animation-range: entry 40% entry 70%;
+}
+
+/* ── Hero scroll cue: breathe loop after reveal ── */
+
+@keyframes cue-breathe {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.35;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.js-enabled .hero__scroll-text {
+  animation: cue-breathe 3s ease-in-out 2s infinite;
 }

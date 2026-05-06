@@ -31,10 +31,11 @@ src/
 │   ├── main.js         — entry point, adds .js-enabled to <html>
 │   ├── nav.js          — header scroll state (.is-scrolled)
 │   ├── observer.js     — IO: .is-visible class on .essay-section
-│   └── font-axes.js    — scroll → --p-opsz CSS custom property
+│   ├── font-axes.js    — scroll → --p-opsz CSS custom property
+│   └── progress.js     — reading progress bar aria-valuenow update
 └── assets/
     ├── fonts/          — self-hosted woff2 variable fonts
-    └── images/         — WebP + AVIF pairs (added in Phase 4)
+    └── images/         — hand-coded SVG typographic specimens (6 files)
 ```
 
 ## CSS Architecture
@@ -66,8 +67,8 @@ Newsreader scroll effect: `opsz` 12→18 via `--p-opsz` custom property set by `
 
 1. Pre-code declaration — DONE
 2. Core HTML/CSS scaffold — DONE
-3. Scroll animations + variable font transitions — pending
-4. Final editorial pass (copy, images, favicon) — pending
+3. Scroll animations + variable font transitions — DONE
+4. Final editorial pass (copy, images, favicon) — DONE
 5. Pre-commit tooling (Husky, ESLint, Stylelint, Prettier) — pending
 6. Recruiter audit + pre-deploy (Lighthouse) + README — pending
 

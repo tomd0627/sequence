@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <!-- Scan-line pattern simulating CRT phosphor rows -->
+    <pattern id="scanlines" x="0" y="0" width="2" height="4" patternUnits="userSpaceOnUse">
+      <rect width="2" height="2" fill="#000" opacity="0.08"/>
+    </pattern>
+    <!-- Pixel grid pattern -->
+    <pattern id="pixelgrid" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+      <rect width="21" height="21" fill="none" stroke="#2e2820" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+
+  <!-- Screen background — dark, warm black -->
+  <rect width="800" height="450" fill="#16120e"/>
+  <!-- Caption strip — slightly lighter dark -->
+  <rect y="408" width="800" height="42" fill="#1e1a14"/>
+
+  <!-- Screen bezel — subtle inner border -->
+  <rect x="30" y="20" width="740" height="368" rx="8" fill="none" stroke="#2e2820" stroke-width="2"/>
+
+  <!-- Large letterforms — the "ideal" curve, faintly visible -->
+  <text x="180" y="320" text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="300" font-weight="700"
+    fill="none" stroke="#ede7d9" stroke-width="0.5" opacity="0.06">R</text>
+  <text x="540" y="320" text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="300" font-weight="700"
+    fill="none" stroke="#ede7d9" stroke-width="0.5" opacity="0.06">r</text>
+
+  <!-- Pixel grid overlay in the central region -->
+  <rect x="50" y="30" width="700" height="350" fill="url(#pixelgrid)" opacity="0.5"/>
+
+  <!-- Rasterized letterform — active pixels forming "R" (left half) -->
+  <!-- Column 1 pixels (x=80 area) — vertical stroke -->
+  <rect x="80"  y="68"  width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <rect x="80"  y="90"  width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <rect x="80"  y="112" width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <rect x="80"  y="134" width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <rect x="80"  y="156" width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <rect x="80"  y="178" width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <rect x="80"  y="200" width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <rect x="80"  y="222" width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <!-- Top crossbar pixels -->
+  <rect x="102" y="68"  width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <rect x="124" y="68"  width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <rect x="146" y="68"  width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <rect x="168" y="68"  width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <!-- Curve top right -->
+  <rect x="190" y="78"  width="20" height="20" fill="#7a7060" opacity="0.7"/>
+  <rect x="202" y="90"  width="20" height="20" fill="#d8d0c0" opacity="0.85"/>
+  <rect x="202" y="112" width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <!-- Mid join -->
+  <rect x="168" y="134" width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <rect x="146" y="134" width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <rect x="124" y="134" width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <rect x="102" y="134" width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <!-- Anti-aliasing fringe — sub-pixel color hints -->
+  <rect x="190" y="134" width="20" height="20" fill="#4a6090" opacity="0.5"/>
+  <rect x="202" y="128" width="20" height="20" fill="#c06060" opacity="0.4"/>
+  <!-- Diagonal leg -->
+  <rect x="124" y="156" width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <rect x="146" y="178" width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <rect x="168" y="200" width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <rect x="190" y="222" width="20" height="20" fill="#d8d0c0" opacity="0.9"/>
+  <rect x="212" y="222" width="20" height="20" fill="#7a7060" opacity="0.6"/>
+  <!-- Anti-aliasing edge pixels along diagonal -->
+  <rect x="102" y="156" width="20" height="20" fill="#5a5040" opacity="0.5"/>
+  <rect x="124" y="178" width="20" height="20" fill="#5a5040" opacity="0.4"/>
+
+  <!-- Scan-line overlay — applies to full screen area -->
+  <rect x="30" y="20" width="740" height="368" fill="url(#scanlines)"/>
+
+  <!-- Screen glare highlight — subtle -->
+  <ellipse cx="200" cy="80" rx="120" ry="40" fill="#fff" opacity="0.025"/>
+
+  <!-- DPI / renderer label — top right of screen -->
+  <text x="710" y="50" text-anchor="end" font-family="'Courier New', Courier, monospace" font-size="10" fill="#5a5040" letter-spacing="1">72 dpi</text>
+  <text x="710" y="64" text-anchor="end" font-family="'Courier New', Courier, monospace" font-size="10" fill="#5a5040" letter-spacing="1">GDI</text>
+
+  <!-- Caption rule + label -->
+  <line x1="50" y1="416" x2="750" y2="416" stroke="#3a3020" stroke-width="1"/>
+  <text x="400" y="437" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="12" fill="#7a6f61" letter-spacing="1">Rasterization at 72 dpi · GDI renderer · c. 1992</text>
+</svg>

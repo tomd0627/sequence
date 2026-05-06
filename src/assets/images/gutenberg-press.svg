@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f5f0e8"/>
+  <!-- Caption strip -->
+  <rect y="408" width="800" height="42" fill="#ede7d9"/>
+
+  <!-- Type sorts — 3×3 grid spelling GUTENBERG -->
+
+  <!-- G (0,0) at (187,12) — highlighted in accent -->
+  <rect x="193" y="18" width="130" height="120" rx="3" fill="#1a1610" opacity="0.22"/>
+  <rect x="187" y="12" width="130" height="120" rx="3" fill="#2e2820"/>
+  <rect x="199" y="22" width="106" height="90" rx="2" fill="#8f2d1a"/>
+  <text x="252" y="91" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="700" fill="#f5f0e8">G</text>
+
+  <!-- U (0,1) at (335,12) -->
+  <rect x="341" y="18" width="130" height="120" rx="3" fill="#1a1610" opacity="0.22"/>
+  <rect x="335" y="12" width="130" height="120" rx="3" fill="#2e2820"/>
+  <rect x="347" y="22" width="106" height="90" rx="2" fill="#1a1610"/>
+  <text x="400" y="91" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="700" fill="#ede7d9">U</text>
+
+  <!-- T (0,2) at (483,12) -->
+  <rect x="489" y="18" width="130" height="120" rx="3" fill="#1a1610" opacity="0.22"/>
+  <rect x="483" y="12" width="130" height="120" rx="3" fill="#2e2820"/>
+  <rect x="495" y="22" width="106" height="90" rx="2" fill="#1a1610"/>
+  <text x="548" y="91" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="700" fill="#ede7d9">T</text>
+
+  <!-- E (1,0) at (187,150) -->
+  <rect x="193" y="156" width="130" height="120" rx="3" fill="#1a1610" opacity="0.22"/>
+  <rect x="187" y="150" width="130" height="120" rx="3" fill="#2e2820"/>
+  <rect x="199" y="160" width="106" height="90" rx="2" fill="#1a1610"/>
+  <text x="252" y="229" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="700" fill="#ede7d9">E</text>
+
+  <!-- N (1,1) at (335,150) -->
+  <rect x="341" y="156" width="130" height="120" rx="3" fill="#1a1610" opacity="0.22"/>
+  <rect x="335" y="150" width="130" height="120" rx="3" fill="#2e2820"/>
+  <rect x="347" y="160" width="106" height="90" rx="2" fill="#1a1610"/>
+  <text x="400" y="229" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="700" fill="#ede7d9">N</text>
+
+  <!-- B (1,2) at (483,150) -->
+  <rect x="489" y="156" width="130" height="120" rx="3" fill="#1a1610" opacity="0.22"/>
+  <rect x="483" y="150" width="130" height="120" rx="3" fill="#2e2820"/>
+  <rect x="495" y="160" width="106" height="90" rx="2" fill="#1a1610"/>
+  <text x="548" y="229" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="700" fill="#ede7d9">B</text>
+
+  <!-- E (2,0) at (187,288) -->
+  <rect x="193" y="294" width="130" height="120" rx="3" fill="#1a1610" opacity="0.22"/>
+  <rect x="187" y="288" width="130" height="120" rx="3" fill="#2e2820"/>
+  <rect x="199" y="298" width="106" height="90" rx="2" fill="#1a1610"/>
+  <text x="252" y="367" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="700" fill="#ede7d9">E</text>
+
+  <!-- R (2,1) at (335,288) -->
+  <rect x="341" y="294" width="130" height="120" rx="3" fill="#1a1610" opacity="0.22"/>
+  <rect x="335" y="288" width="130" height="120" rx="3" fill="#2e2820"/>
+  <rect x="347" y="298" width="106" height="90" rx="2" fill="#1a1610"/>
+  <text x="400" y="367" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="700" fill="#ede7d9">R</text>
+
+  <!-- G (2,2) at (483,288) -->
+  <rect x="489" y="294" width="130" height="120" rx="3" fill="#1a1610" opacity="0.22"/>
+  <rect x="483" y="288" width="130" height="120" rx="3" fill="#2e2820"/>
+  <rect x="495" y="298" width="106" height="90" rx="2" fill="#1a1610"/>
+  <text x="548" y="367" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="700" fill="#ede7d9">G</text>
+
+  <!-- Caption rule + label -->
+  <line x1="187" y1="416" x2="613" y2="416" stroke="#c9bfad" stroke-width="1"/>
+  <text x="400" y="437" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-style="italic" fill="#7a6f61">Johannes Gutenberg · Mainz · 1450</text>
+</svg>

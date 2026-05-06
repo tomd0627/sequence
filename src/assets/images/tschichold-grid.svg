@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f5f0e8"/>
+  <!-- Caption strip -->
+  <rect y="408" width="800" height="42" fill="#ede7d9"/>
+
+  <!-- Baseline grid — subtle horizontal rules -->
+  <line x1="220" y1="100" x2="745" y2="100" stroke="#c9bfad" stroke-width="0.5"/>
+  <line x1="220" y1="140" x2="745" y2="140" stroke="#c9bfad" stroke-width="0.5"/>
+  <line x1="220" y1="180" x2="745" y2="180" stroke="#c9bfad" stroke-width="0.5"/>
+  <line x1="220" y1="220" x2="745" y2="220" stroke="#c9bfad" stroke-width="0.5"/>
+  <line x1="220" y1="260" x2="745" y2="260" stroke="#c9bfad" stroke-width="0.5"/>
+  <line x1="220" y1="300" x2="745" y2="300" stroke="#c9bfad" stroke-width="0.5"/>
+  <line x1="220" y1="340" x2="745" y2="340" stroke="#c9bfad" stroke-width="0.5"/>
+  <line x1="220" y1="380" x2="745" y2="380" stroke="#c9bfad" stroke-width="0.5"/>
+
+  <!-- Construction lines — red -->
+  <line x1="55" y1="44" x2="745" y2="44" stroke="#c0432b" stroke-width="1"/>
+  <line x1="55" y1="400" x2="745" y2="400" stroke="#c0432b" stroke-width="1"/>
+  <line x1="55" y1="44" x2="55" y2="400" stroke="#c0432b" stroke-width="1"/>
+  <line x1="745" y1="44" x2="745" y2="400" stroke="#c0432b" stroke-width="1"/>
+  <!-- Thick vertical column divider -->
+  <line x1="220" y1="44" x2="220" y2="400" stroke="#c0432b" stroke-width="3"/>
+
+  <!-- Side column annotations -->
+  <text x="76" y="82" font-family="'Courier New', Courier, monospace" font-size="10" fill="#7a6f61" letter-spacing="3">§ 01</text>
+  <text x="76" y="165" font-family="'Courier New', Courier, monospace" font-size="10" fill="#7a6f61" letter-spacing="3">§ 02</text>
+  <text x="76" y="285" font-family="'Courier New', Courier, monospace" font-size="10" fill="#7a6f61" letter-spacing="3">§ 03</text>
+  <!-- Side rule decoration -->
+  <rect x="55" y="44" width="3" height="356" fill="#c0432b" opacity="0.12"/>
+
+  <!-- Main column typography -->
+  <text x="240" y="138" font-family="Georgia, 'Times New Roman', serif" font-size="66" font-weight="700" fill="#1a1610">Die neue</text>
+  <text x="240" y="213" font-family="Georgia, 'Times New Roman', serif" font-size="66" font-weight="700" fill="#1a1610">Typographie</text>
+  <text x="242" y="272" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-style="italic" fill="#3d3528">Jan Tschichold</text>
+  <text x="243" y="310" font-family="'Courier New', Courier, monospace" font-size="14" fill="#7a6f61" letter-spacing="2">Berlin · 1928</text>
+
+  <!-- Caption rule + label -->
+  <line x1="55" y1="416" x2="745" y2="416" stroke="#c9bfad" stroke-width="1"/>
+  <text x="400" y="437" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-style="italic" fill="#7a6f61">Asymmetric typography — the page as a functional system</text>
+</svg>

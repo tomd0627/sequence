@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f5f0e8"/>
+  <!-- Caption strip -->
+  <rect y="408" width="800" height="42" fill="#ede7d9"/>
+
+  <!-- Header -->
+  <text x="400" y="46" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="11" fill="#7a6f61" letter-spacing="4">FRAUNCES — VARIABLE FONT SPECIMEN</text>
+  <line x1="100" y1="56" x2="700" y2="56" stroke="#c9bfad" stroke-width="1"/>
+
+  <!-- Panel dividers -->
+  <line x1="267" y1="56" x2="267" y2="408" stroke="#c9bfad" stroke-width="1"/>
+  <line x1="533" y1="56" x2="533" y2="408" stroke="#c9bfad" stroke-width="1"/>
+
+  <!-- Panel 1: wght 200 / SOFT 0 — outline only to simulate thin weight -->
+  <text x="134" y="280" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="220" font-weight="400"
+    fill="none" stroke="#1a1610" stroke-width="1.5">A</text>
+  <line x1="80" y1="340" x2="254" y2="340" stroke="#c9bfad" stroke-width="1"/>
+  <text x="134" y="360" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="11" fill="#7a6f61" letter-spacing="2">wght 200</text>
+  <text x="134" y="378" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="11" fill="#c0432b" letter-spacing="2">SOFT · 0</text>
+
+  <!-- Panel 2: wght 500 / SOFT 50 — semi-filled -->
+  <text x="400" y="280" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="220" font-weight="400"
+    fill="#3d3528" opacity="0.65">A</text>
+  <line x1="282" y1="340" x2="520" y2="340" stroke="#c9bfad" stroke-width="1"/>
+  <text x="400" y="360" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="11" fill="#7a6f61" letter-spacing="2">wght 500</text>
+  <text x="400" y="378" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="11" fill="#c0432b" letter-spacing="2">SOFT · 50</text>
+
+  <!-- Panel 3: wght 700 / SOFT 100 — bold, solid -->
+  <text x="667" y="280" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="220" font-weight="700"
+    fill="#1a1610">A</text>
+  <line x1="546" y1="340" x2="720" y2="340" stroke="#c9bfad" stroke-width="1"/>
+  <text x="667" y="360" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="11" fill="#7a6f61" letter-spacing="2">wght 700</text>
+  <text x="667" y="378" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="11" fill="#c0432b" letter-spacing="2">SOFT · 100</text>
+
+  <!-- Caption rule + label -->
+  <line x1="100" y1="416" x2="700" y2="416" stroke="#c9bfad" stroke-width="1"/>
+  <text x="400" y="437" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-style="italic" fill="#7a6f61">Phaedra Charles &amp; Flavia Zimbardi · 2020 · wght / SOFT / opsz</text>
+</svg>

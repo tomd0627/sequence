@@ -42,8 +42,18 @@
 
   .hero__title span,
   .hero__subtitle,
-  .hero__scroll-cue {
+  .hero__scroll-cue,
+  .hero__scroll-text {
     opacity: 1;
     translate: 0 0;
+  }
+
+  .pullquote {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  .section-ornament {
+    opacity: 1;
   }
 }
